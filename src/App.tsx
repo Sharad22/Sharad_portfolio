@@ -651,9 +651,13 @@ const TranslucentFloatingNavbar = ({
               setMobileMenuOpen(false);
               onTabChange("home");
             }}
-            className="text-xs sm:text-sm font-bold text-slate-900 hover:text-blue-600 transition-colors shrink-0 flex items-center gap-1.5 sm:gap-2 cursor-pointer"
+            className="text-xs sm:text-sm font-bold text-slate-900 hover:text-blue-600 transition-colors shrink-0 flex items-center gap-2 cursor-pointer group"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-[#0F2B5B] to-[#2563EB] shrink-0" />
+            <img
+              src="/pwa-192x192.png"
+              alt="SG Logo"
+              className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg object-contain shadow-xs border border-slate-900/10 group-hover:scale-105 transition-transform shrink-0"
+            />
             <span className="tracking-tight font-bold hidden md:inline xl:text-sm text-xs">Sharadindu Guin</span>
             <span className="tracking-tight font-bold md:hidden">SG</span>
           </button>
