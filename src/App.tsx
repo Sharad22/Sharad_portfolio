@@ -37,6 +37,14 @@ import {
   Lock,
   Download
 } from "lucide-react";
+import {
+  SteelRuler,
+  DraftingPencil,
+  VinylEraser,
+  StickyNote,
+  OrigamiCrane,
+  PlayfulDice
+} from "./components/TabletopArtifacts";
 
 // --- Custom Icon Components ---
 const BehanceIcon = ({ size = 18, className = "" }: { size?: number; className?: string }) => (
@@ -793,48 +801,94 @@ const TranslucentFloatingNavbar = ({
   );
 };
 
-// --- Creative & Dynamic Product Designer Hero Section ---
+// --- Creative & Dynamic Product Designer Hero Section (Blue Cutting Mat Tabletop) ---
 const CreativeHeroSection = ({ onNavigate }: { onNavigate: (tab: string) => void }) => {
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#081226] via-[#0E1D3A] to-[#060D1B] text-white pt-28 pb-16 sm:pt-36 sm:pb-24 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden rounded-b-[2.5rem] sm:rounded-b-[3.5rem] shadow-2xl border-b border-blue-900/50">
-      {/* Background Subtle Gradient & Grid Accents */}
-      <div className="absolute inset-0 bg-grid-pattern-dark opacity-25 pointer-events-none" />
-      <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -left-32 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative w-full bg-cutting-mat-blue text-white pt-28 pb-16 sm:pt-36 sm:pb-24 px-6 sm:px-10 md:px-16 lg:px-20 overflow-hidden rounded-b-[2.5rem] sm:rounded-b-[3.5rem] shadow-2xl border-b border-blue-900/60">
+      {/* Studio Overhead Lighting Vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(37,99,235,0.22)_0%,rgba(6,15,35,0.78)_100%)] pointer-events-none" />
 
-      <div className="relative z-10 max-w-4xl mx-auto space-y-6">
-        <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-400/40 text-cyan-300 text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          <span>Sharadindu Guin · Product Designer</span>
+      {/* Cutting Mat Corner Measurement Coordinates (Authentic Tabletop Detail) */}
+      <div className="absolute top-3 left-4 text-[9px] font-mono tracking-widest text-white/30 uppercase select-none pointer-events-none hidden sm:block">
+        GRID: 12MM / SUB: 60MM · BLUE CUTTING MAT NO.04 · SHARADINDU STUDIO
+      </div>
+      <div className="absolute bottom-3 right-6 text-[9px] font-mono tracking-widest text-white/30 uppercase select-none pointer-events-none hidden sm:block">
+        300DPI · VECTOR CALIBRATED · 100% SCALE
+      </div>
+
+      {/* --- Physical Tabletop Artifacts (Ruler, Pencil, Eraser, Sticky Note, Dice, Crane) --- */}
+      {/* 1. Stainless Steel Engineering Ruler (Moved down from top edge to avoid navbar overlap) */}
+      <div className="absolute top-10 sm:top-8 -right-16 sm:-right-6 lg:right-6 w-72 sm:w-[380px] lg:w-[460px] rotate-[32deg] z-0 opacity-90 transition-transform hover:rotate-[30deg]">
+        <SteelRuler />
+      </div>
+
+      {/* 2. Sharpened Wooden Drafting Pencil (Moved down to avoid navbar overlap) */}
+      <div className="absolute top-26 sm:top-24 left-2 sm:left-6 lg:left-14 w-44 sm:w-60 rotate-[-18deg] z-0 opacity-90 transition-transform hover:rotate-[-15deg]">
+        <DraftingPencil />
+      </div>
+
+      {/* 3. Vinyl Block Eraser (Mid Left) */}
+      <div className="absolute top-56 sm:top-60 left-4 sm:left-14 w-22 sm:w-28 rotate-[14deg] z-0 opacity-90 transition-transform hover:rotate-[10deg] hidden md:block">
+        <VinylEraser />
+      </div>
+
+      {/* 4. 3D Perspective Dice (Top Right) */}
+      <div className="absolute top-24 sm:top-28 right-12 sm:right-28 lg:right-40 rotate-[-12deg] z-0 hidden sm:block">
+        <PlayfulDice />
+      </div>
+
+      {/* 5. Pastel Yellow Sticky Note (Bottom Left) */}
+      <div className="absolute bottom-10 sm:bottom-14 left-4 sm:left-16 rotate-[-5deg] z-0 hidden lg:block">
+        <StickyNote text="Move things around, have fun!" subtitle="Think human · Solve systems ⚡" />
+      </div>
+
+      {/* 6. Red Geometric Origami Crane (Bottom Right) */}
+      <div className="absolute bottom-8 sm:bottom-12 right-6 sm:right-20 rotate-[-10deg] z-0 hidden sm:block">
+        <OrigamiCrane />
+      </div>
+
+      {/* --- Central Hero Content --- */}
+      <div className="relative z-10 max-w-4xl mx-auto space-y-6 text-center flex flex-col items-center">
+        {/* Simple Editorial Greeting */}
+        <div className="space-y-1 text-center">
+          <span className="font-editorial italic text-2xl sm:text-3xl md:text-4xl text-white/95 font-medium tracking-tight block">
+            Hi! I'm Sharadindu
+          </span>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[#E8FAF4] leading-[0.95] uppercase drop-shadow-sm">
+            UX/PRODUCT
+            <br />
+            DESIGNER
+          </h1>
         </div>
 
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.1] max-w-3xl">
-          Crafting digital products that bridge{" "}
-          <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-indigo-200 bg-clip-text text-transparent">
-            human intent
-          </span>{" "}
-          & complex systems.
-        </h1>
+        {/* Hero Mission & Simple Previously Worked @ Wipro Text with Bright Rainbow Gradient */}
+        <div className="space-y-1.5 max-w-3xl text-center mx-auto">
+          <p className="text-base sm:text-xl font-semibold text-cyan-200/90 leading-snug">
+            Crafting digital products that bridge human intent & complex systems.
+          </p>
+          <p className="text-sm sm:text-base text-slate-300 font-medium tracking-wide">
+            Previously worked @{" "}
+            <span className="font-extrabold bg-gradient-to-r from-[#FF0055] via-[#FF7700] via-[#FFD600] via-[#00E055] via-[#00B4D8] to-[#9D4EDD] bg-clip-text text-transparent opacity-100">
+              Wipro
+            </span>
+          </p>
+        </div>
 
-        <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl font-normal">
-          Combining a Computer Science degree, 3D multimedia background, and UI/UX postgraduate specialization from <strong>IIT Roorkee</strong> to turn complex software workflows into clear, elegant, high-converting digital products.
-        </p>
-
-        {/* Action CTAs */}
-        <div className="flex flex-wrap items-center gap-4 pt-2">
+        {/* Action CTAs (Preserving Existing Styles & Drop Shadows, Centered) */}
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
           <button
             onClick={() => {
               const el = document.getElementById("projects-grid");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-500 hover:opacity-95 transition-all shadow-lg shadow-cyan-900/30 hover:scale-[1.02] border border-cyan-300/30 cursor-pointer"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-500 hover:opacity-95 transition-all shadow-lg shadow-cyan-950/40 hover:scale-[1.02] border border-cyan-300/30 cursor-pointer"
           >
             <span>Explore Case Studies</span>
             <ArrowUpRight size={18} />
           </button>
           <button
             onClick={() => onNavigate("about")}
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-slate-200 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all shadow-xs cursor-pointer"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-slate-200 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all shadow-md shadow-black/20 cursor-pointer"
           >
             <User size={16} className="text-cyan-300" />
             <span>My Journey</span>
@@ -842,18 +896,25 @@ const CreativeHeroSection = ({ onNavigate }: { onNavigate: (tab: string) => void
         </div>
 
         {/* Quick Credentials Strip */}
-        <div className="pt-6 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs font-semibold text-slate-300 max-w-2xl">
-          <div className="flex items-center gap-2">
-            <GraduationCap size={16} className="text-cyan-400 shrink-0" />
-            <span>IIT Roorkee UI/UX</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Briefcase size={16} className="text-cyan-400 shrink-0" />
-            <span>2+ Yrs Experience</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Award size={16} className="text-cyan-400 shrink-0" />
-            <span>8+ Case Studies</span>
+        <div className="pt-6 border-t border-white/15 max-w-sm sm:max-w-md w-full mx-auto">
+          <div className="grid grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-2.5 text-xs font-semibold text-slate-200">
+            {/* Row 1, Col 1: IIT Roorkee UI/UX */}
+            <div className="flex items-center gap-2 justify-start">
+              <GraduationCap size={16} className="text-cyan-400 shrink-0" />
+              <span>IIT Roorkee UI/UX</span>
+            </div>
+
+            {/* Row 1, Col 2: 2+ Yrs Experience (in line with IIT Roorkee UI/UX) */}
+            <div className="flex items-center gap-2 justify-start">
+              <Briefcase size={16} className="text-cyan-400 shrink-0" />
+              <span>2+ Yrs Experience</span>
+            </div>
+
+            {/* Row 2, Col 1: 8+ Projects (starts at same position as IIT Roorkee UI/UX) */}
+            <div className="flex items-center gap-2 justify-start text-slate-300 font-medium">
+              <Award size={16} className="text-cyan-400 shrink-0" />
+              <span>8+ Projects</span>
+            </div>
           </div>
         </div>
       </div>

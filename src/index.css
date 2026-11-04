@@ -45,6 +45,22 @@
                     linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
 }
 
+/* Designer Self-Healing Cutting Mat Table Top (Blue) */
+.bg-cutting-mat-blue {
+  background-color: #0c335e;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.22) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.22) 1.5px, transparent 1.5px),
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 60px 60px, 60px 60px, 12px 12px, 12px 12px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+.font-editorial {
+  font-family: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 /* Offset anchor scrolling */
 [id] {
   scroll-margin-top: 6rem;
