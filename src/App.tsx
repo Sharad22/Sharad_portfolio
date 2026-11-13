@@ -167,7 +167,11 @@ const PROJECTS = [
       "https://drive.google.com/file/d/1ud7Z038tA9NfTH-VkAmUblWaCzhMc4P1/view?usp=drive_link",
       "https://drive.google.com/file/d/1uT0mHvy1NhlXsAwnSVicAkKXMPQ0wMdK/view?usp=drive_link",
       "https://drive.google.com/file/d/1VHIvWz6-Ovq-lx10Cl77LZdCJI-VTkbw/view?usp=drive_link",
-      "https://drive.google.com/file/d/1ZGtNAC_oVbLNq6LnhFY6U5vj1xT1oGbP/view?usp=drive_link"
+      "https://drive.google.com/file/d/1ZGtNAC_oVbLNq6LnhFY6U5vj1xT1oGbP/view?usp=drive_link",
+      "https://drive.google.com/file/d/1h0NkBOUfrDlhonz2gdE9lA4p15m93tEj/view?usp=drive_link",
+      "https://drive.google.com/file/d/1YAqY8VGaunqTAA1WplES-dCeOTQGYnGQ/view?usp=drive_link",
+      "https://drive.google.com/file/d/101H_JFv2uKgBWKroo-qbJTUfytmDyDNu/view?usp=drive_link",
+      "https://drive.google.com/file/d/12oGszQG_oBCdm0uzJ-L6Xah8L7y7Sbr2/view?usp=drive_link"
     ]
   },
   {
